@@ -63,4 +63,4 @@ Since previously I used `parseInt` on my prompt it returns our `userInt` as a nu
 ## Conclusion
 - - -
 
-The password generator is fully functional and available to view at:
+The password generator is fully functional and available to view at: https://kankanrr.github.io/Random-Pass-Gen-Using-Prompts/
