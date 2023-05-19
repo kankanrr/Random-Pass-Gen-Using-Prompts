@@ -44,7 +44,25 @@ function generatePassword() {
         var confirmSyms = confirm("Include Symbols?");
     }
 
-    
+    // Conditioning to check which prompt vars were checked true & concats arrays for later use
+    if (confirmLower) {
+        resArray = resArray.concat(lowChar)
+    }
+    if (confirmUpper) {
+        resArray = resArray.concat(upChar)
+    }
+    if (confirmNums) {
+        resArray = resArray.concat(numS)
+    }
+    if (confirmSyms) {
+        resArray = resArray.concat(symS)
+    }
+
+    // logged resulting array to see if they were concatted correctly
+    console.log(resArray)
+
+    // returns fully gen pass and converts it into string
+    return userArray.join("");
 }
 
 // this function stores out generatePassword func into a var and targets pass id to display it
