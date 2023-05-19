@@ -61,6 +61,11 @@ function generatePassword() {
     // logged resulting array to see if they were concatted correctly
     console.log(resArray)
 
+    // start random gen
+    for (var i = 0; i < userInt; i++) {
+        // pushes our resulting array from conditioning into userArray var
+        userArray.push(resArray[Math.floor(Math.random() * resArray.length)]);
+    }
     // returns fully gen pass and converts it into string
     return userArray.join("");
 }
@@ -71,7 +76,7 @@ function writePassword() {
     var passwordText = document.querySelector("#password");
 
     // passwordText will first run gen func then paste output val into passwordText area
-    passwordText = password;
+    passwordText.value = password;
 }
 
 // Add event listener to generate button
